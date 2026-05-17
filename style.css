@@ -1,0 +1,800 @@
+/*
+    Author: Zeke Ferreira
+    Date: 5/17/26
+*/
+
+/* General formatting */
+
+    body {
+        margin: 0;
+        font-size: 20px;
+        background-color: #DE6A57;
+        overflow-x: hidden;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    main {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+
+    header,
+    footer,
+    section {
+        padding: 10px;
+    }
+
+    img,
+    #slideImage {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h2 {
+        font-family: Impact, sans-serif;
+        font-size: 36px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    h3 {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.7;
+        color: black;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        max-width: 100%;
+    }
+
+/* Nav bar */
+
+    header {
+        background-color: black;
+    }
+
+    .site-name {
+        flex: 0 1 auto;
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        font-weight: bold;
+        font-size: 36px;
+        color: #DE6A57;
+        margin: 0;
+    }
+
+    .main-nav {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .nav-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+
+    .nav-list a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 12px;
+        display: block;
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        font-size: 36px;
+        white-space: nowrap;
+    }
+
+    .nav-list a:hover,
+    .nav-list a.active {
+        background-color: #363131;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+/* Footer formatting */
+
+    footer {
+        background-color: black;
+        text-align: center;
+        padding: 15px;
+    }
+
+    footer p {
+        color: white;
+    }
+
+/* Main page */
+
+    /* Hero image */
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* About Us formatting */
+
+    .intro-text {
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 25px auto;
+        text-align: center;
+        box-shadow: 6px 6px 0 black;
+    }
+
+    .intro-text h2 {
+        margin-top: 0;
+        border-bottom: 2px solid black;
+        padding-bottom: 8px;
+    }
+
+    .intro-text p {
+        font-size: 18px;
+        line-height: 1.7;
+        color: black;
+    }
+
+    .button-link {
+        display: inline-block;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        padding: 12px 18px;
+        border-radius: 6px;
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 1px;
+    }
+
+    .button-link:hover {
+        background-color: #363131;
+    }
+
+    /* Card formatting */
+
+    .card-container {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    .card {
+        flex: 1;
+        min-width: 250px;
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 6px 6px 0 black;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card h3 {
+        margin-top: 0;
+        text-align: center;
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        font-size: 30px;
+        letter-spacing: 1px;
+        border-bottom: 2px solid black;
+        padding-bottom: 8px;
+    }
+
+    .card ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+
+    .card li {
+        text-align: center;
+    }
+
+    .card p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: black;
+    }
+
+    .program-list {
+        padding-left: 0;
+        list-style-type: none;
+        margin: 0;
+    }
+
+    .program-list li {
+        background-color: #f2f2f2;
+        border: 2px solid black;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .program-list strong {
+        display: block;
+        font-family: Arial, 'Arial Narrow Bold', sans-serif;
+        font-size: 22px;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+
+    .program-list span {
+        display: block;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .reviews-card blockquote {
+        background-color: #f2f2f2;
+        border-left: 5px solid black;
+        border-radius: 8px;
+        margin: 0 0 15px 0;
+        padding: 12px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .reviews-card cite {
+        display: block;
+        margin-top: 8px;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    /* Information section formatting */
+
+    .information-section {
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 30px auto;
+        box-shadow: 6px 6px 0 black;
+    }
+
+    .information-section h2 {
+        margin-top: 0;
+        border-bottom: 2px solid black;
+        padding-bottom: 8px;
+    }
+
+    .information-section p {
+        text-align: center;
+    }
+
+    .information-section img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        display: block;
+        border: 3px solid black;
+        border-radius: 10px;
+        margin: 15px auto;
+    }
+
+/* Form page */
+
+    .form-page-heading,
+    #mainForm {
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 12px;
+        padding: 30px;
+        margin: 30px auto;
+        box-shadow: 6px 6px 0 black;
+        max-width: 700px;
+    }
+
+    .form-page-heading h2 {
+        margin-top: 0;
+        color: black;
+        border-bottom: 2px solid black;
+        padding-bottom: 8px;
+    }
+
+    .form-page-heading p {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .form-section {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+    }
+
+    .form-row {
+        margin-bottom: 18px;
+    }
+
+    .form-row label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #cccccc;
+        border-radius: 6px;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+    }
+
+    .form-row input:focus,
+    .form-row select:focus,
+    .form-row textarea:focus {
+        outline: none;
+        border-color: black;
+    }
+
+    .form-row textarea {
+        resize: vertical;
+    }
+
+    .submit-button {
+        width: 100%;
+        padding: 14px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 20px;
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        cursor: pointer;
+    }
+
+    .submit-button:hover {
+        background-color: #363131;
+    }
+
+    #formMessages {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    .error {
+        color: darkred;
+        background-color: #ffe6e6;
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .success {
+        color: darkgreen;
+        background-color: #e6ffe6;
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+/* Events page */
+
+    .calendar-section,
+    .slideshow-section {
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 30px auto;
+        box-shadow: 6px 6px 0 black;
+    }
+
+    .calendar-section h2,
+    .slideshow-section h2 {
+        margin-top: 0;
+        border-bottom: 2px solid black;
+        padding-bottom: 8px;
+    }
+
+    .calendar-section p,
+    .slideshow-section p {
+        text-align: center;
+    }
+
+    .calendar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    .calendar-header h3 {
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        font-size: 30px;
+        letter-spacing: 1px;
+        margin: 0;
+    }
+
+    .calendar-header button {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 18px;
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .calendar-header button:hover {
+        background-color: #363131;
+    }
+
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 8px;
+        margin: 20px auto;
+    }
+
+    .calendar-day-name {
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 1px;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .calendar-cell {
+        min-height: 80px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 6px;
+        padding: 8px;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .empty-cell {
+        background-color: #f2f2f2;
+        border: 2px solid #999999;
+    }
+
+    .today {
+        outline: 4px solid black;
+    }
+
+    .event-day {
+        background-color: yellow;
+    }
+
+    #calendarControls {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+
+    #calendarControls button,
+    .calendar-header button,
+    #prevSlide,
+    #nextSlide {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 18px;
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    #calendarControls button:hover,
+    #prevSlide:hover,
+    #nextSlide:hover {
+        background-color: #363131;
+    }
+
+    #calendarList {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    .calendar-event {
+        flex: 1;
+        min-width: 250px;
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 6px 6px 0 black;
+        text-align: center;
+    }
+
+    .calendar-event h3 {
+        margin-top: 0;
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        font-size: 26px;
+        letter-spacing: 1px;
+        border-bottom: 2px solid black;
+        padding-bottom: 8px;
+    }
+
+    .calendar-event p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .slideshow-section {
+        text-align: center;
+    }
+
+    #slideImage {
+        width: 100%;
+        max-width: 650px;
+        display: block;
+        border: 3px solid black;
+        border-radius: 10px;
+        margin: 20px auto;
+    }
+
+    #slideTitle {
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        font-size: 30px;
+        letter-spacing: 1px;
+        border-bottom: 2px solid black;
+        padding-bottom: 8px;
+        max-width: 650px;
+        margin: 20px auto 10px auto;
+    }
+
+/* Medium screens */
+
+    @media screen and (max-width: 900px) {
+        main {
+            padding: 15px;
+        }
+
+        .main-nav {
+            justify-content: center;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .site-name {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .intro-section,
+        .information-section,
+        .card-container,
+        #calendarList {
+            display: block;
+        }
+
+        .hero-image,
+        .intro-text,
+        .card,
+        .calendar-event {
+            margin-bottom: 15px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+        }
+    }
+
+/* Small screens */
+
+    @media screen and (max-width: 600px) {
+        header,
+        footer,
+        section {
+            padding: 8px;
+        }
+
+        main {
+            padding: 10px;
+        }
+
+        .main-nav {
+            display: block;
+            padding: 10px;
+        }
+
+        .site-name {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .menu-button {
+            display: block;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            width: 100%;
+            margin-top: 10px;
+            font-family: Arial;
+        }
+
+        .nav-list {
+            display: none;
+            text-align: center;
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .nav-list.show {
+            display: flex;
+        }
+
+        .nav-list li {
+            width: 100%;
+        }
+
+        .nav-list a {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p,
+        li,
+        label,
+        input,
+        select,
+        textarea,
+        button {
+            font-size: 16px;
+        }
+
+        button,
+        .button-link {
+            display: inline-block;
+            max-width: 100%;
+            text-align: center;
+        }
+   
+        .calendar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .calendar-header h3 {
+            font-family: Impact, 'Arial Narrow Bold', sans-serif;
+            font-size: 30px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .calendar-header button {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 18px;
+            font-family: Impact, 'Arial Narrow Bold', sans-serif;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .calendar-header button:hover {
+            background-color: #363131;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            margin: 20px auto;
+        }
+
+        .calendar-day-name {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Impact, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 1px;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .calendar-cell {
+            min-height: 80px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 6px;
+            padding: 8px;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .empty-cell {
+            background-color: #f2f2f2;
+            border: 2px solid #999999;
+        }
+
+        .today {
+            outline: 4px solid black;
+        }
+
+        .event-day {
+            background-color: yellow;
+        }
+
+        #calendarControls {
+                display: block;
+            }
+
+            #calendarControls button,
+            .calendar-header button,
+            #prevSlide,
+            #nextSlide {
+                width: 100%;
+                margin-bottom: 8px;
+            }
+
+            .form-page-heading,
+            #mainForm,
+            .page-heading,
+            .calendar-section,
+            .slideshow-section,
+            .intro-text,
+            .information-section,
+            .card,
+            .calendar-event {
+                box-shadow: 4px 4px 0 black;
+            }
+        }

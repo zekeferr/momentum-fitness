@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- 
+    Author: Zeke Ferreira
+    Date: 5/17/26
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum Fitness Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="main-nav">
+            <h1 class="site-name">Momentum Fitness</h1>
+            <button id="menuButton" class="menu-button" type="button">Menu</button>
+            <ul id="navList" class="nav-list">
+                <li><a href="index.html">About Us</a></li>
+                <li><a class="active" href="form.html">Registration</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-page-heading">
+            <h2>Membership Registration</h2>
+            <p>
+                Fill out the form below to register with Momentum Fitness.
+                All fields are required before submitting.
+            </p>
+        </section>
+
+        <section class="form-section">
+            <form id="mainForm" novalidate>
+                <div class="form-row">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com">
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" placeholder="555-555-5555">
+                </div>
+
+                <div class="form-row">
+                    <label for="optionType">Membership Type</label>
+                    <select id="optionType" name="optionType">
+                        <option value="">Choose one</option>
+                        <option value="option-one">Basic Membership</option>
+                        <option value="option-two">Standard Membership</option>
+                        <option value="option-three">Premium Membership</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="comments">Fitness Goals</label>
+                    <textarea id="comments" name="comments" rows="5" placeholder="Tell us about your goals."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age">
+                </div>
+
+                <div class="form-row">
+                    <label for="dateChoice">Preferred Start Date</label>
+                    <input type="date" id="dateChoice" name="dateChoice">
+                </div>
+
+                <div class="form-row">
+                    <label for="timeChoice">Preferred Training Time</label>
+                    <select id="timeChoice" name="timeChoice">
+                        <option value="">Choose one</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                    </select>
+                </div>
+
+                <button class="submit-button" type="submit">Submit Registration</button>
+            </form>
+
+            <div id="formMessages"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Momentum Fitness. All rights reserved.</p>
+    </footer>
+</body>
+</html>

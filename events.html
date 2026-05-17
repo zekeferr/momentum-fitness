@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- 
+    Author: Zeke Ferreira
+    Date: 5/17/26
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum Fitness Events</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="main-nav">
+            <h1 class="site-name">Momentum Fitness</h1>
+            <button id="menuButton" class="menu-button" type="button">Menu</button>
+            <ul id="navList" class="nav-list">
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="form.html">Registration</a></li>
+                <li><a class="active" href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calendar-section">
+            <h2>Event Calendar</h2>
+            <p>
+                Check out upcoming Momentum Fitness events and browse through our featured gym activities.
+            </p>
+
+            <div class="calendar-header">
+                <button id="previousMonth" type="button">Previous Month</button>
+                <h3 id="calendarMonth">Month Year</h3>
+                <button id="nextMonth" type="button">Next Month</button>
+            </div>
+
+            <div class="calendar-grid" id="calendarGrid"></div>
+
+            <h3>Upcoming Event Details</h3>
+            <div id="calendarList"></div>
+        </section>
+
+        <section class="slideshow-section">
+            <h2>Featured Programs</h2>
+            <p>
+                Look below to see all the programs we have to offer!
+            </p>
+
+            <img id="slideImage" src="images/kickboxing.jpg">
+            <h3 id="slideTitle">Slide One</h3>
+            <p id="slideDescription">Slide description goes here.</p>
+
+            <button id="prevSlide" type="button">Previous</button>
+            <button id="nextSlide" type="button">Next</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Momentum Fitness. All rights reserved.</p>
+    </footer>
+</body>
+</html>
